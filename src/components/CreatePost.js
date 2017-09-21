@@ -23,7 +23,7 @@ export default class CreatePost extends Component {
         this.setState({ authorName: e.target.value, blogTitle: e.target.value, blogEntry: e.target.value });
         let listItem = JSON.stringify(this.state);
 
-        fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting", {
+        fetch("https://tiny-lasagna-server.herokuapp.com/collections/blogger/", {
             method: "POST",
             body: listItem,
             headers: {

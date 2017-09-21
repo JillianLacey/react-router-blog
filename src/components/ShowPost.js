@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
 
 export default class ShowPost extends Component {
-    render() {
-        return (
-            <div>
 
+    render() {
+
+        let posts;
+        posts = this.props.posts.map((post, index) => {
+            return (
+                <div key={index}>
+                    <p>Author: {post.authorName}</p>
+                    <p>Blog Title: {post.blogTitle}</p>
+                    <p>Blog Entry: {post.blogEntry}</p>
+                </div>
+            )
+        })
+
+        return (
+
+            <div>{posts}
             </div>
-        )
+        );
+
     }
 }
